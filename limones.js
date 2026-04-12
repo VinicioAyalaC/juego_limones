@@ -16,9 +16,11 @@ let limonY=0;
 
 let puntaje=0;
 let vidas=3;
+let velocidadCaida=200;
 
 
 function iniciar(){
+    setInterval(bajarLimon, velocidadCaida);  // ejecuta una funcion en intervalos de mili segundos
     dibujarSuelo();
     dibujarPersonaje();
     dibujarLimon();
@@ -88,11 +90,15 @@ function detectarAtrapado(){
     }
 }
 
+
 function detectarPiso(){
     if(limonY+ALTURA_LIMON == canvas.height-ALTURA_SUELO){
         aparecerLimon();
         vidas=vidas-1;
         mostrarEnSpan("txtVidas", vidas);
+        if(vidas==0){
+            alert("GAME OVER");
+        }
     }
 }
 
