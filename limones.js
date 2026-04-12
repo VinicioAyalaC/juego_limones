@@ -20,7 +20,7 @@ let velocidadCaida=200;
 
 
 function iniciar(){
-    setInterval(bajarLimon, velocidadCaida);  // ejecuta una funcion en intervalos de mili segundos
+    let intervalo = setInterval(bajarLimon, velocidadCaida);  // ejecuta una funcion en intervalos de mili segundos
     dibujarSuelo();
     dibujarPersonaje();
     dibujarLimon();
@@ -89,7 +89,11 @@ function detectarAtrapado(){
         mostrarEnSpan("txtPuntaje", puntaje);
         if(puntaje==3){ velocidadCaida=150;  }
         if(puntaje==6){ velocidadCaida=100;  }
-        if(puntaje==10){ alert("...GANADOR...");  }
+        
+        if(puntaje>=10){ 
+            alert("...GANADOR...");  
+            clearInterval(intervalo);
+        }
     }
 }
 
@@ -99,8 +103,9 @@ function detectarPiso(){
         aparecerLimon();
         vidas=vidas-1;
         mostrarEnSpan("txtVidas", vidas);
-        if(vidas==0){
+        if(vidas<=0){
             alert("GAME OVER");
+            clearInterval(intervalo);
         }
     }
 }
