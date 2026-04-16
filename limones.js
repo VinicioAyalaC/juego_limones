@@ -34,6 +34,11 @@ function dibujarSuelo(){
     ctx.fillStyle="blue";
     ctx.fillRect(0,canvas.height-ALTURA_SUELO,canvas.clientWidth,ALTURA_SUELO);
 
+    // Tierra base
+    ctx.fillStyle = "#343e37"; // verde pastel
+    ctx.fillRect(0, 350, 600, 50);
+
+
 }
 
 function dibujarPersonaje(){
