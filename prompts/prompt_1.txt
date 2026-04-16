@@ -1,4 +1,2 @@
-entrego el codigo del juego cazando limones, se necesita mejorar la presentacion, 
-la parte azul de abajo es tierra, mejora con un color y forma a tierra, para el 
-resto del juego utilizar una paleta de colores pasteles como morado en tono bajo, 
-el diseño debe ser de un gamer
+ahora incorporar un fondo (background), el cual se llama "FondoJuego.jpg" , 
+ajustar al tamaño de la pantalla
